@@ -122,15 +122,8 @@ Sequential logic: non-blocking (<=)
 
 Combinational logic: blocking (=)
 
-⭐ Summary Table
-Operation / Goal	Use assign	Use always @(*)	Use always @(posedge clk)
-Simple combinational logic	✔	❌	❌
-Case / if-else logic	❌	✔	❌
-Multi-line combinational	❌	✔	❌
-Registers, counters	❌	❌	✔
-FSM state registers	❌	❌	✔
-FSM next-state logic	❌	✔	❌
-Testbench initialization	❌	❌	initial only
+<img width="978" height="686" alt="image" src="https://github.com/user-attachments/assets/a8c8c4b7-c0ad-4ade-961a-18f9ebb6a6d8" />
+
 ✅ Conclusion
 
 Procedural blocks are powerful when used correctly.
