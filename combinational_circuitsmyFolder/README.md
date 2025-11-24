@@ -18,6 +18,15 @@
 
 <img width="607" height="695" alt="image" src="https://github.com/user-attachments/assets/2c69c5c6-c960-4f1a-a143-734889bc80d9" />
 
+#
+
+<img width="1309" height="1061" alt="image" src="https://github.com/user-attachments/assets/eadf4405-fff3-493b-beb5-107fe45d566c" />
+
+#
+<img width="727" height="792" alt="image" src="https://github.com/user-attachments/assets/8b15e58b-e7c8-460a-8673-d4a8a59e9a92" />
+
+
+
 
 # Procedural Block
 Procedural Blocks in Verilog — When to Use and When Not to Use
@@ -128,9 +137,65 @@ Combinational logic: blocking (=)
 
 Procedural blocks are powerful when used correctly.
 Use them for behavioral, multi-step, conditional, or sequential logic.
-Use assign for simple, direct wiring.![Uploading image.png…]()
+Use assign for simple, direct wiring.<img width="1001" height="451" alt="image" src="https://github.com/user-attachments/assets/28822f50-97ad-47d5-8cef-1ab6d23bc684" />
+
+# CASE staement
+
+No — a case statement does NOT always need to be inside an always block.
+
+It depends on what you are trying to build.
+
+✅ 1. Case inside always @(*) (most common)
+
+Used for combinational logic when assigning to reg signals.
+
+Example:
+always @(*) begin
+    case(sel)
+        0: out = a;
+        1: out = b;
+        default: out = 0;
+    endcase
+end
+
+This is the standard way because case must drive a reg, and regs can only be written in procedural blocks (always, initial).
+
+✅ 2. Case inside always @(posedge clk)
+
+Used for sequential logic, like state machines.
+
+Example:
+always @(posedge clk) begin
+    case(state)
+        S0: state <= S1;
+        S1: state <= S2;
+    endcase
+end
+✅ 3. Case inside a function (allowed)
+function [3:0] priority(input [3:0] x);
+    case(x)
+        4'b1000: priority = 0;
+        4'b0100: priority = 1;
+    endcase
+endfunction
 
 
+Functions behave like combinational logic.
+
+❌ Case outside any procedural block is NOT allowed
+
+You CANNOT use:
+
+case(sel)
+    0: out = a;
+endcase
+
+
+This is illegal because Verilog only allows case statements inside procedural regions (always, initial, functions, tasks).
+
+
+#
+![Uploading image.png…]()
 
 
 
