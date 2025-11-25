@@ -217,8 +217,15 @@ This is illegal because Verilog only allows case statements inside procedural re
 They define the **bit-width of each element** and behave like a single vector/bus.
 
 Example:
-```verilog
+verilog
 reg [7:0] data;   // packed [7:0] => one 8-bit register
+
+# 2) Unpacked Arrays
+
+**Unpacked ranges are written to the ** right** of the variable name.**
+They define the number of elements (separate words/registers).
+
+Example:
 
 
 
