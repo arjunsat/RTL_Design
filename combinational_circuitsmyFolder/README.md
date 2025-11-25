@@ -192,10 +192,22 @@ endcase
 
 
 This is illegal because Verilog only allows case statements inside procedural regions (always, initial, functions, tasks).
+#
 
+
+<img width="840" height="334" alt="image" src="https://github.com/user-attachments/assets/b72d6623-a85e-4762-b04c-142e6d24bc93" />
 
 #
-![Uploading image.png…]()
+
+<img width="764" height="482" alt="image" src="https://github.com/user-attachments/assets/e957a711-3dd6-4815-ad23-dc276385d414" />
+
+#
+
+<img width="1385" height="494" alt="image" src="https://github.com/user-attachments/assets/614f073b-f0d3-43dc-858a-6b728891060d" />
+
+
+
+
 
 
 
