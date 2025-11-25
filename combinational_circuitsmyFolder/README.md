@@ -206,6 +206,23 @@ This is illegal because Verilog only allows case statements inside procedural re
 <img width="1385" height="494" alt="image" src="https://github.com/user-attachments/assets/614f073b-f0d3-43dc-858a-6b728891060d" />
 
 
+# Concept of vectors
+
+<img width="1195" height="242" alt="image" src="https://github.com/user-attachments/assets/c5341af4-eaa8-42ce-8db0-e67c48c5f06a" />
+
+# Packed vs Unpacked Arrays + SRAM Modeling (Quick Notes)
+
+## 1) Packed Arrays
+**Packed ranges are written to the *left* of the variable name.**  
+They define the **bit-width of each element** and behave like a single vector/bus.
+
+Example:
+```verilog
+reg [7:0] data;   // packed [7:0] => one 8-bit register
+
+
+
+
 
 
 
